@@ -25,6 +25,7 @@ PORT=5000
 USER=icebear
 DATABASE=mongodb+srv://icebear:<PASSWORD>@icebear.lokpg.mongodb.net/barbecue?retryWrites=true&w=majority
 DATABASE_PASSWORD=****
+
 INFURA=****
 
 To start the implementation:
