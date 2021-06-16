@@ -21,9 +21,13 @@ Get a key from infura,
 Then create a *config.env* file that looks like this:
 
 NODE_ENV=development
+
 PORT=5000
+
 USER=icebear
+
 DATABASE=mongodb+srv://icebear:<PASSWORD>@icebear.lokpg.mongodb.net/barbecue?retryWrites=true&w=majority
+
 DATABASE_PASSWORD=****
 
 INFURA=****
