@@ -13,3 +13,22 @@ Apart from the general stats, Barbecue consist of 2 main parts:
 Implementation is stateless, which means it doesn't need any previous data to run. However, we use some stored data, to make it faster.
 
 Implementation doesn't include the Sauce.js, which is a collection of adaptors to distribute the profits further. It calculates and distributes the profits made by defi protocols through vEth2. Which means you can use your vEth2 to get more profits on any Eth pool in all defi.
+
+## Develop 
+
+Get an atlas account and signup to use mongodb,
+Get a key from infura,
+Then create a *config.env* file that looks like this:
+
+NODE_ENV=development
+PORT=5000
+USER=icebear
+DATABASE=mongodb+srv://icebear:<PASSWORD>@icebear.lokpg.mongodb.net/barbecue?retryWrites=true&w=majority
+DATABASE_PASSWORD=****
+INFURA=****
+
+To start the implementation:
+```
+npm install
+npm run dev
+```
