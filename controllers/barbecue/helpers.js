@@ -10,6 +10,8 @@ web3.setProvider(new web3.providers.HttpProvider(`https://mainnet.infura.io/v3/$
 const vEth2Params = require('../data/vEth2.json');
 let vEth2 = new web3.eth.Contract(vEth2Params.abi, Web3.utils.toChecksumAddress(vEth2Params.address));
 
+// So this is used to calc user deposits 
+// but any outbound transfers are deducted so any staked veth2 is discounted right? 
 exports.calculator = async (account_address) => {
     const [balance, latest_block, inEvents, outEvents] = await Promise.all([
 
