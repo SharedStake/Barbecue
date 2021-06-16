@@ -67,7 +67,7 @@ const saveAndRespond = async (data, value, res) => {
 exports.exitPool = catchAsync(async (req, res, next) => {
     var data = await checkTimer('exitPool', DELAY, res)
     if (data) {
-        console.log("s")
+
         let contractBal = await web3.eth.getBalance(
             web3.utils.toChecksumAddress(pool._address)
         );
@@ -80,7 +80,7 @@ exports.exitPool = catchAsync(async (req, res, next) => {
 exports.totalStaked = catchAsync(async (req, res, next) => {
     var data = await checkTimer('totalStaked', DELAY, res)
     if (data) {
-        console.log("s")
+
         var totalSupply = await vEth2.methods.totalSupply().call()
         totalSupply = BN(totalSupply).toString()
 
@@ -93,7 +93,7 @@ exports.veth2Price = catchAsync(async (req, res, next) => {
 
     var data = await checkTimer('veth2Price', DELAY, res)
     if (data) {
-        console.log("s")
+
         let myamount = BN(1E18).toString();
         var vETh2Price = await Saddle.methods.calculateSwap(0, 1, myamount).call();
         vETh2Price = BN(vETh2Price).toString()
@@ -106,7 +106,7 @@ exports.veth2Price = catchAsync(async (req, res, next) => {
 exports.sgtPrice = catchAsync(async (req, res, next) => {
     var data = await checkTimer('sgtPrice', DELAY, res)
     if (data) {
-        console.log("s")
+
         const sgtCoinId = "sharedstake-governance-token";
         const apiUrl = "https://api.coingecko.com/api/v3/";
         const priceUrl = apiUrl + `simple/price?ids=${sgtCoinId}&vs_currencies=usd`
@@ -121,7 +121,7 @@ exports.circSupply = catchAsync(async (req, res, next) => { //for SGT
 
     var data = await checkTimer('circSupply', DELAY, res)
     if (data) {
-        console.log("s")
+
         var TotalSup = BN(10000000).multipliedBy(1e18);
         var circSup = BN(TotalSup);
         try {
